@@ -1,0 +1,51 @@
+<?php
+
+function getMakes() {
+    global $conn;
+    $sql = "SELECT * FROM makes";
+    $result = mysqli_query($conn, $sql);
+
+    $makes = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    return $makes;
+}
+
+function getMakeData($slug) {
+    global $conn;
+    $sql = "SELECT * FROM makes WHERE slug='$slug'";
+    $result = mysqli_query($conn, $sql);
+
+    $data = mysqli_fetch_assoc($result);
+
+    return $data;
+}
+
+function getCarsForMake($make) {
+    global $conn;
+    $sql = "SELECT * FROM cars WHERE make='$make'";
+    $result = mysqli_query($conn, $sql);
+
+    $cars = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    return $cars;
+}
+
+function getCarData($slug) {
+    global $conn;
+    $sql = "SELECT * FROM cars WHERE slug='$slug'";
+    $result = mysqli_query($conn, $sql);
+
+    $car = mysqli_fetch_assoc($result);
+
+    return $car;
+}
+
+function getCarImages($car) {
+    global $conn;
+    $sql = "SELECT * FROM images WHERE car='$car'";
+    $result = mysqli_query($conn, $sql);
+
+    $images = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    return $images;
+}
