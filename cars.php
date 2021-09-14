@@ -27,4 +27,17 @@
                 <?php endfor ?>
             </div>
         </div>
+        <div class="row description">
+            <div class="col-sm-4">
+                <p><?php echo $car['style']?></p>
+            </div>
+            <div class="col-sm-4">
+                <p><?php echo $car['msrp']?></p>
+            </div>
+            <div class="col-sm-4">
+                <a href="<?php echo $car['c_and_d']?>">
+                    <img src="assets/images/c_and_d.jpg" alt="Car and driver logo" class="img-responsive">
+                </a>
+            </div>
+        </div>
     </div>
