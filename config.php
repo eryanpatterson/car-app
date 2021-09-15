@@ -8,7 +8,7 @@
     $conn = mysqli_connect($host, $user, $password, $db);
 
     if (!$conn) {
-        die("Error connecting to database: " . mysqli_connect_error());
+        die("Error connecting to ye olde database: " . mysqli_connect_error());
     }
 
     define ('ROOT_PATH', realpath(dirname(__FILE__)));
