@@ -3,16 +3,27 @@
 <?php require_once( ROOT_PATH . '/components/head.php') ?>
 
 <?php $car = getCarData($_GET['model']); ?>
-<?php $car_name = $car['make'] . ' ' . $car['model']; ?>
+<?php $make = getMakeOfCar($car['make']); ?>
+<?php $name = $car['make'] . ' ' . $car['model']; ?>
 <?php $images = getCarImages($car['slug']); ?>
 
-    <title>Car Compare: <?php echo $car_name ?></title>
+    <title>Car Compare: <?php echo $name ?></title>
 </head>
 
 <body>
+    <?php include( ROOT_PATH . '/components/navbar.php'); ?>
     <div class="container">
-        <div class="page-header">
-            <h1> <?php echo $car_name ?> </h1>
+        <div class="header row">
+            <div class="col-sm-6">
+                <h1 class="model"> <?php echo $name ?> </h1>
+            </div>
+            <div class="col-sm-6 logo">
+                <a href="<?php echo BASE_URL . '/makes.php?make=' . $make['slug']?>">     
+                    <img src="<?php echo $make['logo'] ?>"
+                        alt="<?php echo $make['make_name'] . ' logo' ?>"
+                    >
+                </a>
+            </div>
         </div>
         <div class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">

@@ -10,6 +10,16 @@ function getMakes() {
     return $makes;
 }
 
+function getStyles() {
+    global $conn;
+    $sql = "SELECT * FROM styles";
+    $result = mysqli_query($conn, $sql);
+
+    $styles = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    return $styles;
+}
+
 function getMakeData($slug) {
     global $conn;
     $sql = "SELECT * FROM makes WHERE slug='$slug'";
@@ -48,4 +58,14 @@ function getCarImages($car) {
     $images = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
     return $images;
+}
+
+function getMakeOfCar($make_name) {
+    global $conn;
+    $sql = "SELECT * FROM makes WHERE make_name='$make_name'";
+    $result = mysqli_query($conn, $sql);
+
+    $make = mysqli_fetch_assoc($result);
+
+    return $make;
 }

@@ -7,10 +7,10 @@
 </head>
 
 <body>
+    <?php include( ROOT_PATH . '/components/navbar.php') ?>
     <div class="container">
-        <div class="jumbotron text-center">
-            <h1>Car Compare</h1>
-            <p>Browse by make or style.</p>
+        <div class="heading text-center">
+            <h2>Browse by make or style.</h2>
         </div>
         <div class="main">
         <?php foreach ($makes as $make): ?>
@@ -18,7 +18,7 @@
                 <a href="<?php echo BASE_URL . 'makes.php?make=' . $make['slug'] ?>">
                     <img 
                         src="<?php echo $make['logo'] ?>"
-                        class="img-thumbnail" alt="<?php echo $make['name'] . ' logo' ?>"    
+                        class="img-thumbnail" alt="<?php echo $make['make_name'] . ' logo' ?>"    
                     >
                 </a>
             </div>
