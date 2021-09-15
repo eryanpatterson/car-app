@@ -1,3 +1,8 @@
+a, a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
 .navbar {
     position: relative;
 }
@@ -81,4 +86,31 @@
 .model {
     font-family: Glory, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 400;
+}
+
+.car {
+    padding: 30px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.thumbnail {
+    position: relative;
+    height: 100%;
+}
+.thumbnail img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.thumbnail p {
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    color: white;
+    font-family: Glory, sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-shadow: 0 0 2px black;
 }

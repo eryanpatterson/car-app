@@ -4,6 +4,7 @@
 
 <?php $car = getCarData($_GET['model']); ?>
 <?php $make = getMakeOfCar($car['make']); ?>
+<?php $style = getStyleOfCar($car['style']); ?>
 <?php $name = $car['make'] . ' ' . $car['model']; ?>
 <?php $images = getCarImages($car['slug']); ?>
 
@@ -40,7 +41,7 @@
         </div>
         <div class="row description">
             <div class="col-sm-4">
-                <p><?php echo $car['style']?></p>
+                <p><a href="<?php echo BASE_URL . 'styles.php?style=' . $style['slug'] ?>"><?php echo $car['style']?></a></p>
             </div>
             <div class="col-sm-4">
                 <p><?php echo $car['msrp']?></p>
