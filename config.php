@@ -1,14 +1,10 @@
 <?php
     session_start();
 
-    $test_string = getenv("TEST_STRING");
-
-    $conn = pg_connect(getenv("DB_URI"));
-
-    echo $test_string;
+    $conn = pg_connect(getenv("DATABASE_URL"));
 
     if (!$conn) {
-        die("$test_string" . mysqli_connect_error());
+        die( 'Failed to connect to database ');
     }
 
     define ('ROOT_PATH', realpath(dirname(__FILE__)));
