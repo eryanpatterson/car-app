@@ -1,10 +1,10 @@
 <?php
     session_start();
 
-    $conn = mysqli_connect("localhost", "root", "", "car-app");
+    $conn = pg_connect(getenv("DATABASE_URL"));
 
     if (!$conn) {
-        die("Error connecting to database: " . mysqli_connect_error());
+        die( 'Failed to connect to database ' . pg_last_error());
     }
 
     define ('ROOT_PATH', realpath(dirname(__FILE__)));
