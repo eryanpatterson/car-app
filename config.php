@@ -3,9 +3,9 @@
 
     $conn = pg_connect(getenv("DATABASE_URL"));
 
-    /*if (!$conn) {
+    if (!$conn) {
         die( 'Failed to connect to database ' . pg_last_error());
-    }*/
+    }
 
     define ('ROOT_PATH', realpath(dirname(__FILE__)));
     define('BASE_URL', 'http://localhost/car-app/');
