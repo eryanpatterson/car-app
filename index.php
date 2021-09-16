@@ -6,12 +6,9 @@
     <title>Car Compare: Home</title>
 </head>
 
-<body>
-    <?php $test = getenv("TEST_VAR"); ?>
-        
+<body>  
     <?php include( ROOT_PATH . '/components/navbar.php') ?>
     <div class="container">
-        <h1><?php echo $test;?></h1>
         <div class="heading text-center">
             <h2>Browse by make or style.</h2>
         </div>
