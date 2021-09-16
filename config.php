@@ -5,6 +5,8 @@
 
     $conn = pg_connect(getenv("DB_URI"));
 
+    echo $test_string;
+
     if (!$conn) {
         die("$test_string" . mysqli_connect_error());
     }
