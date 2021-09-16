@@ -7,7 +7,7 @@
     $db = 'dfo8dbpa5aijgo';
     $port = 5432;
 
-    $conn = pg_connect("host='$host' port=$port user='$user' password='$password', dbname='$db'");
+    $conn = pg_connect(getenv("DB_URI"));
 
     if (!$conn) {
         die("Error connecting to ye olde database: " . mysqli_connect_error());
