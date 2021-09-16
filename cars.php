@@ -18,13 +18,7 @@
             <div class="col-sm-6">
                 <h1 class="model"> <?php echo $name ?> </h1>
             </div>
-            <div class="col-sm-6 logo">
-                <a href="<?php echo BASE_URL . '/makes.php?make=' . $make['slug']?>">     
-                    <img src="<?php echo $make['logo'] ?>"
-                        alt="<?php echo $make['make_name'] . ' logo' ?>"
-                    >
-                </a>
-            </div>
+            
         </div>
         <div class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -47,9 +41,18 @@
                 <p><?php echo $car['msrp']?></p>
             </div>
             <div class="col-sm-4">
+                <div class="col-sm-6">
                 <a href="<?php echo $car['c_and_d']?>">
                     <img src="assets/images/c_and_d.jpg" alt="Car and driver logo" class="img-responsive">
                 </a>
+                </div>
+                <div class="col-sm-6 logo">
+                <a href="<?php echo BASE_URL . '/makes.php?make=' . $make['slug']?>">     
+                    <img src="<?php echo $make['logo'] ?>"
+                        alt="<?php echo $make['make_name'] . ' logo' ?>"
+                    >
+                </a>
+                </div>
             </div>
         </div>
     </div>
