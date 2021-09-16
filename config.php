@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    //session_start();
 
     $conn = pg_connect(getenv("DATABASE_URL"));
 
