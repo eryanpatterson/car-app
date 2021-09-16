@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    $conn = pg_connect(getenv("DATABSE_URL"));
+    $conn = pg_connect(getenv("DATABASE_URL"));
 
     if (!$conn) {
         die( 'Failed to connect to database ' . pg_last_error());
