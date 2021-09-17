@@ -9,7 +9,7 @@
 <body>  
     <?php include( ROOT_PATH . '/components/navbar.php') ?>
     <div class="container">
-        <div class="heading text-center">
+        <div class="heading">
             <h2>Browse by make or style.</h2>
         </div>
         <div class="main">

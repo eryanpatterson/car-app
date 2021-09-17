@@ -33,6 +33,7 @@
                 <?php endfor ?>
             </div>
         </div>
+        <div class="row"></div>
         <div class="row description">
             <div class="col-sm-4">
                 <p><a href="<?php echo '/styles.php?style=' . $style['slug'] ?>"><?php echo $car['style']?></a></p>
