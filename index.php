@@ -15,7 +15,7 @@
         <div class="main">
         <?php foreach ($makes as $make): ?>
             <div class="col-sm-4 icon">
-                <a href="<?php echo BASE_URL . 'makes.php?make=' . $make['slug'] ?>">
+                <a href="<?php echo '/makes.php?make=' . $make['slug'] ?>">
                     <img 
                         src="<?php echo $make['logo'] ?>"
                         class="img-thumbnail" alt="<?php echo $make['make_name'] . ' logo' ?>"    

@@ -4,7 +4,7 @@
 <div class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="home" href="<?php echo BASE_URL ?>">car compare</a>
+            <a class="home" href="<?php echo 'index.php' ?>">car compare</a>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav navbar-right">
@@ -15,7 +15,7 @@
                     <ul class="dropdown-menu">
                         <?php foreach($nav_makes as $nav_make): ?>
                             <li>
-                                <a class="dropdown-item" href="<?php echo BASE_URL . 'makes.php?make=' . $nav_make['slug']?>">
+                                <a class="dropdown-item" href="<?php echo '/makes.php?make=' . $nav_make['slug']?>">
                                     <?php echo $nav_make['make_name'] ?>
                                 </a>
                             </li>
@@ -29,7 +29,7 @@
                     <ul class="dropdown-menu">
                         <?php foreach($nav_styles as $nav_style): ?>
                             <li>
-                                <a class="dropdown-item" href="<?php echo BASE_URL . 'styles.php?style=' . $nav_style['slug']?>">
+                                <a class="dropdown-item" href="<?php echo '/styles.php?style=' . $nav_style['slug']?>">
                                     <?php echo $nav_style['style_name'] ?>
                                 </a>
                             </li>

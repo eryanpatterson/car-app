@@ -35,7 +35,7 @@
         </div>
         <div class="row description">
             <div class="col-sm-4">
-                <p><a href="<?php echo BASE_URL . 'styles.php?style=' . $style['slug'] ?>"><?php echo $car['style']?></a></p>
+                <p><a href="<?php echo '/styles.php?style=' . $style['slug'] ?>"><?php echo $car['style']?></a></p>
             </div>
             <div class="col-sm-4">
                 <p><?php echo $car['msrp']?></p>
@@ -47,7 +47,7 @@
                 </a>
                 </div>
                 <div class="col-sm-6 logo">
-                <a href="<?php echo BASE_URL . '/makes.php?make=' . $make['slug']?>">     
+                <a href="<?php echo '/makes.php?make=' . $make['slug']?>">     
                     <img src="<?php echo $make['logo'] ?>"
                         alt="<?php echo $make['make_name'] . ' logo' ?>"
                     >
