@@ -1,7 +1,7 @@
 <?php
     session_start();
     $db_password = getenv("MYSQL_PASSWORD");
-    $user = getenv('MYSQL_USER');
+    $user = getenv("MYSQL_USER");
     $conn = mysqli_connect('localhost', $user, $db_password, 'car_compare');
 
     if (!$conn) {
