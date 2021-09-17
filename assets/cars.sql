@@ -3,7 +3,7 @@ INSERT INTO `makes` (`id`, `make_name`, `country`, `slug`, `logo`) VALUE
 
 INSERT INTO `styles` (`id`, `style_name`, `slug`) VALUES
 (2, 'Mid-Size Sedan', 'mid-size-sedan'),
-(3, 'Full-Size Pickup', 'full-size-pickup);
+(3, 'Full-Size Pickup', 'full-size-pickup');
 
 
 INSERT INTO `cars` (`id`, `make`, `style`, `model`, `image`, `slug`, `msrp`, `c_and_d`, `maker_site`) VALUES
