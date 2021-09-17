@@ -1,5 +1,4 @@
-INSERT INTO `makes` (`id`, `make_name`, `country`, `slug`, `logo`) VALUE
-(5, 'Honda', 'Japan', 'honda', 'https://listcarbrands.com/wp-content/uploads/2016/03/logo-Honda.png');
+UPDATE `makes` SET `logo` = 'https://www.pngfind.com/pngs/m/110-1103747_honda-logo-png-png-transparent-png.png' WHERE `makes`.`id` = 2;
 
 INSERT INTO `styles` (`id`, `style_name`, `slug`) VALUES
 (2, 'Mid-Size Sedan', 'mid-size-sedan'),
