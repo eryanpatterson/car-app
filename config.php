@@ -1,7 +1,8 @@
 <?php
     session_start();
-
-    $conn = mysqli_connect('localhost', 'root', '', 'car_compare');
+    $db_password = getenv("MYSQL_PASSWORD");
+    $user = getenv('MYSQL_USER');
+    $conn = mysqli_connect('localhost', $user, $db_password, 'car_compare');
 
     if (!$conn) {
         die( 'Failed to connect to database ' . mysqli_connect_error());
